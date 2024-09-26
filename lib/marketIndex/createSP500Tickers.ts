@@ -1,7 +1,7 @@
 import { Ticker } from '@prisma/client';
 import FMPApi from 'lib/data/FMPApi';
 import prisma from 'lib/db/prisma';
-import { MarketIndexJobOptions } from 'lib/interfaces';
+import { MarketIndexJobOptions } from 'lib/types/interfaces';
 import arrayHasItems from 'lib/utils/arrayHasItems';
 import { beforeMarketCloseTime, withinMarketRefreshWindow } from 'lib/utils/time';
 

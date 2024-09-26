@@ -1,13 +1,12 @@
-import { QUEUE } from 'lib/const';
-import gracefulShutdown from 'lib/utils/gracefulShutdown';
+import { QUEUE } from 'lib/const'
+import gracefulShutdown from 'lib/utils/gracefulShutdown'
 import * as Sentry from '@sentry/node'
 import '@sentry/tracing'
 
-
-import marketIndexCronProcessor from './marketIndex/cron';
-import refreshMarketIndexProcessor from './marketIndex/refresh';
-import refreshMarketIndexTickerProcessor from './marketIndex/refreshTicker';
-import { createWorker } from './worker.factory';
+import marketIndexCronProcessor from './marketIndex/cron'
+import refreshMarketIndexProcessor from './marketIndex/refresh'
+import refreshMarketIndexTickerProcessor from './marketIndex/refreshTicker'
+import { createWorker } from './worker.factory'
 
 const start = () => {
   console.info('Starting workers...')
@@ -53,14 +52,16 @@ const start = () => {
   console.info('Workers startup complete')
 }
 
-Sentry.init({
-  dsn: process.env.SENTRY_WORKER_DSN,
+if (process.env.NODE_ENV === 'production') {
+  Sentry.init({
+    dsn: process.env.SENTRY_WORKER_DSN,
 
-  // Set tracesSampleRate to 1.0 to capture 100%
-  // of transactions for performance monitoring.
-  // We recommend adjusting this value in production
-  tracesSampleRate: 1.0,
-})
+    // Set tracesSampleRate to 1.0 to capture 100%
+    // of transactions for performance monitoring.
+    // We recommend adjusting this value in production
+    tracesSampleRate: 1.0,
+  })
+}
 
 try {
   start()

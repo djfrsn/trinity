@@ -1,10 +1,10 @@
-// addSP500UpdateJobs()
 import { Job, MarketIndex } from '@prisma/client';
-import { IndexJob, MarketIndexJobOptions } from 'lib/interfaces';
 import { CreateMarketIndexJob } from 'lib/types';
+import { IndexJob, MarketIndexJobOptions } from 'lib/types/interfaces';
 
 import createSP500RefreshJob from './createSP500RefreshJob';
 
+// addSP500UpdateJobs()
 type MarketIndexMethod = (options: MarketIndexJobOptions) => Promise<Job>
 
 const createJob: { [name: string]: MarketIndexMethod } = {

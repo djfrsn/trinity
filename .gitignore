@@ -10,3 +10,4 @@ pm-bw.todo
 dist
 # Sentry
 .sentryclirc
+public/img/stocks

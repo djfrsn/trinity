@@ -3,8 +3,8 @@ import { MarketIndex as MarketIndexType } from '@prisma/client';
 import Container from 'components/Container';
 import Layout from 'components/Layout';
 import MarketIndex from 'components/MarketIndex';
-import { Pages } from 'lib/enums';
 import { MarketIndexQuery } from 'lib/graphql';
+import { Pages } from 'lib/types/enums';
 import { getMarketPageOptions } from 'lib/utils/pages';
 import { useRouter } from 'next/router';
 

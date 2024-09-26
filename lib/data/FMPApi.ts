@@ -1,4 +1,4 @@
-import { FMPPrice, FMPTicker, TickerData } from 'lib/interfaces';
+import { FMPPrice, FMPTicker, TickerData } from 'lib/types/interfaces';
 
 import chunk from '../utils/chunk';
 import fetch from '../utils/fetch';

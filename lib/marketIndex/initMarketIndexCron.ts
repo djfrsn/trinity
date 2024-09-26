@@ -1,10 +1,10 @@
-import { Job } from '@prisma/client';
-import { Job as QueueJob, JobsOptions } from 'bullmq';
-import { QUEUE } from 'lib/const';
-import prisma from 'lib/db/prisma';
-import { defaultJobOptions, refreshMarketsQueue } from 'lib/db/queue';
-import { MarketInterval } from 'lib/enums';
-import validKey from 'lib/utils/validKey';
+import { Job } from '@prisma/client'
+import { Job as QueueJob, JobsOptions } from 'bullmq'
+import { QUEUE } from 'lib/const'
+import prisma from 'lib/db/prisma'
+import { defaultJobOptions, refreshMarketsQueue } from 'lib/db/queue'
+import { MarketInterval } from 'lib/types/enums'
+import validKey from 'lib/utils/validKey'
 
 interface MarketIndexesRefresh {
   error?: { message: string; data?: Job }
@@ -29,7 +29,7 @@ async function initMarketIndexCron(options: {
     const queueJobs: Promise<QueueJob>[] = []
     let options: JobsOptions = defaultJobOptions
 
-    if (process.env.MARKET_INDEX_CRON_ENABLED)
+    if (process.env.MARKET_INDEX_CRON_ENABLED === 'true')
       options.repeat = { cron: QUEUE.cron.marketIndexes }
 
     // create job for each timeframe available

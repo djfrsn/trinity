@@ -2,8 +2,8 @@ import * as Sentry from '@sentry/node';
 import { Job } from 'bullmq';
 import { QUEUE } from 'lib/const';
 import prisma from 'lib/db/prisma';
-import { RefreshMarketJob } from 'lib/interfaces';
 import refreshMarketIndexTimeSeries from 'lib/marketIndex/refreshMarketIndexTimeSeries';
+import { RefreshMarketJob } from 'lib/types/interfaces';
 import { moment } from 'lib/utils/time';
 
 /**

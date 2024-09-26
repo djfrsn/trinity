@@ -2,7 +2,7 @@ import classnames from 'classnames';
 import LineChart from 'components/LineChart';
 import { ModalButton } from 'components/Modal';
 import { modalContent, modalContentId } from 'lib/cache';
-import { Pages } from 'lib/enums';
+import { Pages } from 'lib/types/enums';
 import chartOptions from 'lib/utils/chartOptions';
 import { getLineColor } from 'lib/utils/charts';
 import { format, moment, momentBusiness } from 'lib/utils/time';

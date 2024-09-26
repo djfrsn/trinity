@@ -2,8 +2,8 @@ import { useQuery } from '@apollo/client';
 import Container from 'components/Container';
 import { openModal } from 'components/Modal';
 import gql from 'graphql-tag';
-import { Ticker } from 'lib/interfaces';
 import { FetchMore } from 'lib/types';
+import { Ticker } from 'lib/types/interfaces';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 

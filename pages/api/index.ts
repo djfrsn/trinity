@@ -14,6 +14,8 @@ import sentryPlugin from '../../lib/utils/sentry-plugin';
 import { minutesToMilliseconds, timeAgo } from '../../lib/utils/time';
 import context from './context';
 
+global.__basedir = `${__dirname}/../..`
+
 export const GQLDate = asNexusMethod(DateTimeResolver, 'date')
 
 const largeDatasetCacheHint = { maxAge: 3600 }

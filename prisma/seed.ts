@@ -1,5 +1,5 @@
 import { Prisma, PrismaClient } from '@prisma/client';
-import { MarketIndex, MarketInterval } from 'lib/enums';
+import { MarketIndex, MarketInterval } from 'lib/types/enums';
 
 const prisma = new PrismaClient()
 

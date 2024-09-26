@@ -1,7 +1,7 @@
 import getJob from 'lib/db/getJob';
 import prisma from 'lib/db/prisma';
-import { IndexJob } from 'lib/interfaces';
 import createMarketIndexJob from 'lib/marketIndex/createMarketIndexJob';
+import { IndexJob } from 'lib/types/interfaces';
 
 interface handleMarketIndexJobRequestOptions {
   marketIndexId: number | string

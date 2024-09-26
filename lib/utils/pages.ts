@@ -1,5 +1,5 @@
 import { SCREENS } from 'lib/const';
-import { MarketIndex } from 'lib/enums';
+import { MarketIndex } from 'lib/types/enums';
 
 export function getMarketPageOptions(routerQuery) {
   const indexLimit = Number(process.env.NEXT_PUBLIC_INDEX_LIMIT)

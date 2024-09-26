@@ -4,7 +4,7 @@ import ProgressBar from 'components/ProgressBar';
 import { request } from 'graphql-request';
 import gql from 'graphql-tag';
 import { QUEUE } from 'lib/const';
-import { RefreshMarketTickerJob } from 'lib/interfaces';
+import { RefreshMarketTickerJob } from 'lib/types/interfaces';
 import fetcher from 'lib/utils/fetcher';
 import moment from 'moment';
 import useSWR from 'swr';

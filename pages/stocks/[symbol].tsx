@@ -4,7 +4,7 @@ import Layout from 'components/Layout';
 import TickerDetails from 'components/stocks/TickerDetails';
 import prisma from 'lib/db/prisma';
 import { TickerQuery } from 'lib/graphql';
-import { Ticker } from 'lib/interfaces';
+import { Ticker } from 'lib/types/interfaces';
 import getRouterQueryParams from 'lib/utils/getRouterQueryParams';
 import getTimeSeriesHighLow from 'lib/utils/getTimeSeriesHighLow';
 import { formatUSD } from 'lib/utils/numbers';

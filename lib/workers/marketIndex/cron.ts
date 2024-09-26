@@ -1,8 +1,8 @@
 import * as Sentry from '@sentry/node';
 import { Job } from 'bullmq';
 import { QUEUE } from 'lib/const';
-import { MarketIndexCronJob } from 'lib/interfaces';
 import handleMarketIndexJobRequest from 'lib/marketIndex/handleMarketIndexJobRequest';
+import { MarketIndexCronJob } from 'lib/types/interfaces';
 
 /**
  * Description: Runs after all tickers for a given index have been updated(see: refreshTicker.ts)

@@ -1,6 +1,6 @@
 import FMPApi from 'lib/data/FMPApi';
 import prisma from 'lib/db/prisma';
-import { RefreshMarketJob, RefreshMarketJobOptions } from 'lib/interfaces';
+import { RefreshMarketJob, RefreshMarketJobOptions } from 'lib/types/interfaces';
 import arrayHasItems from 'lib/utils/arrayHasItems';
 import { normalizeDate } from 'lib/utils/time';
 import moment from 'moment';

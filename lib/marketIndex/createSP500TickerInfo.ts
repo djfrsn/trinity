@@ -1,6 +1,6 @@
 import FMPApi from 'lib/data/FMPApi';
 import prisma from 'lib/db/prisma';
-import { CreateSp500TickerOptions, RefreshMarketTickerJob } from 'lib/interfaces';
+import { CreateSp500TickerOptions, RefreshMarketTickerJob } from 'lib/types/interfaces';
 import arrayHasItems from 'lib/utils/arrayHasItems';
 import { normalizeDate } from 'lib/utils/time';
 import moment from 'moment';
